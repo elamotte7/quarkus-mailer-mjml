@@ -1,0 +1,22 @@
+<mj-section padding="20px 20px 0 20px" background-color="#FFFFFF">
+  <mj-column width="35%">
+    <mj-text>
+      <img src="{context.logoEmailHeader}"/>
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-section background-color="#FFFFFF">
+  <mj-column>
+    <mj-text font-style="normal" font-weight="600"
+             font-size="11px" line-height="14,98px"
+             letter-spacing="0.1em" text-transform="uppercase"
+             color="#888888" align="center">
+      Example of sending email based on mjml, Qute and quarkus mailer
+    </mj-text>
+  </mj-column>
+</mj-section>
+<mj-section background-color="#FFFFFF">
+  <mj-column>
+    <mj-divider width="100%" border-width="1px" border-color="#E5E5E5" border-style="solid"></mj-divider>
+  </mj-column>
+</mj-section>
