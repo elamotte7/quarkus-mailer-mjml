@@ -8,16 +8,16 @@ If you want to learn more about Quarkus, please visit its website: https://quark
 
 This module is using the following components:
 - cdi
-- mailer
-- qute
-- resteasy
+- [mailer](https://quarkus.io/guides/mailer-reference)
+- [qute](https://quarkus.io/guides/qute)
+- [resteasy](https://quarkus.io/guides/rest-json)
 - resteasy-jackson
 - smallrye-context-propagation
 - smallrye-openapi
-- swagger-ui
+- [swagger-ui](https://quarkus.io/guides/openapi-swaggerui)
 - vertx
-- mjml
-- lombok
+- [mjml](https://mjml.io/) the email responsive framework
+- [lombok](https://projectlombok.org/)
 
 
 ## Running the application in dev mode
