@@ -1,2 +1,3 @@
 npm install --global mjml & ^
-mjml emailNotification.mjml -o ../resources/templates/EmailTemplates/emailNotification.html
+mjml emailNotificationMailTemplate.mjml -o ../resources/templates/EmailTemplates/emailNotificationMailTemplate.html & ^
+mjml emailNotificationTemplate.mjml -o ../resources/templates/EmailTemplates/emailNotificationTemplate.html

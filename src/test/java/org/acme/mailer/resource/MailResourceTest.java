@@ -27,7 +27,25 @@ class MailResourceTest {
     }
 
     @Test
-    void testMail() {
+    void testMailTemplate() {
+        given()
+                .when()
+                .get("/mail/mail-template")
+                .then()
+                .statusCode(Response.Status.OK.getStatusCode());
+
+        // verify that it was sent
+        List<Mail> sent = mailbox.getMessagesSentTo(TO);
+        assertEquals(1, sent.size());
+        Mail actual = sent.get(0);
+        assertTrue(actual.getHtml().contains("Your contract"));
+        assertTrue(actual.getSubject().equals("subject"));
+
+        assertEquals(3, mailbox.getTotalMessagesSent());
+    }
+
+    @Test
+    void testTemplate() {
         given()
                 .when()
                 .get("/mail/template")

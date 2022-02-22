@@ -1,0 +1,67 @@
+<mjml>
+  <mj-head>
+    <mj-font name="OpenSans" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600"></mj-font>
+    <mj-attributes>
+      <mj-all font-family="Open Sans, sans-serif"></mj-all>
+      <mj-section padding="0px"></mj-section>
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#F2F2F2">
+    <mj-section padding="20px 20px 0 20px">
+    </mj-section>
+    <mj-include path="./email-header.mjml"/>
+    <mj-section background-color="#FFFFFF">
+      <mj-column>
+        <mj-text font-style="normal" font-weight="normal" font-size="13px" line-height="18px" color="#333333">
+          Hi,
+        </mj-text>
+        <mj-text font-style="normal" font-weight="normal" font-size="13px" line-height="18px" color="#333333">
+          Your contract {context.contractId} has ben modified.
+        </mj-text>
+        <mj-text font-style="normal" font-weight="normal" font-size="13px" line-height="18px" color="#333333">
+          Please validate it by clicking on the following button.
+        </mj-text>
+        <mj-button align="center" background-color="#0099CC"
+                   font-style="normal" font-weight="600" font-size="15px" line-height="20px">
+          <a href="{context.contractLink}" style="color: #F9F9F9; text-decoration:none;">
+            Edit the contract
+          </a>
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#FFFFFF">
+      <mj-column width="100%">
+        <mj-text padding="10px 0px 0 40px" font-style="normal" font-weight="normal"
+                 font-size="13px" line-height="18px" color="#333333" text-decoration="underline">
+          Additional notes :
+        </mj-text>
+        <mj-text padding="10px 0px 0 40px" font-style="normal" font-weight="normal"
+                 font-size="13px" line-height="18px" color="#333333">
+          <p style="white-space: pre-wrap;">
+            {context.contractAdditionalNotes}
+          </p>
+        </mj-text>
+        <mj-text padding="10px 0px 0 40px" font-style="normal" font-weight="normal"
+                 font-size="13px" line-height="18px" color="#333333">
+          contact me if there is a problem.
+        </mj-text>
+        <mj-text padding="10px 0px 0 40px" font-style="normal" font-weight="normal"
+                 font-size="13px" line-height="18px" color="#333333">
+          Regards,
+        </mj-text>
+        <mj-text padding="10px 0px 0 40px" font-style="normal" font-weight="bold"
+                 font-size="13px" line-height="18px" color="#333333">
+          {context.senderFullName}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="50px 0 0 0" background-color="#FFFFFF">
+      <mj-column>
+        <mj-image src="http://nimus.de/share/tpl-card/bottom.png" alt="bottom border" align="center" border="none"
+                  padding="0px"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-include path="./email-footer.mjml"/>
+  </mj-body>
+</mjml>
