@@ -1,10 +1,10 @@
 version: '3'
 services:
   mailhog:
-    image: registry.sedona.fr/images/mailhog:latest
+    image: mailhog/mailhog:latest
     hostname: mailhog
     ports:
-      - 8025:8025
-      - 1025:1025
+      - "8025:8025"
+      - "1025:1025"
 networks:
   default: { }
