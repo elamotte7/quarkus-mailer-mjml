@@ -3,7 +3,6 @@ package org.acme.mailer.service;
 import io.quarkus.mailer.Mail;
 import io.quarkus.mailer.MailTemplate;
 import io.quarkus.mailer.Mailer;
-import io.quarkus.qute.Template;
 import io.quarkus.qute.TemplateInstance;
 import lombok.extern.slf4j.Slf4j;
 
@@ -57,16 +56,16 @@ public class MailService {
      * @param template the html email template
      */
     public void sendTypeSafeTemplate(String from,
-                                         String[] toEmails,
-                                         String subject,
-                                         String[] ccEmails,
-                                         TemplateInstance template) {
+                                     String[] toEmails,
+                                     String subject,
+                                     String[] ccEmails,
+                                     TemplateInstance template) {
         logger.info("Sending email to {} from {}",
                 String.join(",", toEmails), from);
         mailer.send(Mail.withHtml(
-                "",
-                subject,
-                template.render())
+                        "",
+                        subject,
+                        template.render())
                 .setFrom(from)
                 .setTo(Arrays.stream(toEmails).toList())
                 .setCc(Arrays.stream(ccEmails).toList())
